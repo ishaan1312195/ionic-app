@@ -11,14 +11,14 @@ import { SocialSharing } from '@ionic-native/social-sharing';
 export class PropertyDetailsPage {
 
     static get parameters() {
-        return [[NavController], [NavParams], [PropertyService]];
+        return [[NavController], [NavParams], [PropertyService], [SocialSharing]];
     }
 
     constructor(nav, navParams, propertyService, socialSharing) {
         this.nav = nav;
         this.propertyService = propertyService;
         this.property = navParams.get('property');
-        this.socialSharing = SocialSharing
+        this.socialSharing = socialSharing;
     }
 
     ngOnInit() {
@@ -67,7 +67,7 @@ export class PropertyDetailsPage {
                     text: 'Facebook',
                     handler: () => {
                         console.log(window.location.href);
-                        this.socialSharing.shareViaFacebook('message', image, url).then(() => {
+                        this.socialSharing.shareViaFacebook('message', undefined, undefined).then(() => {
                         // Success!
                         }).catch(() => {
                         // Error!
@@ -78,7 +78,7 @@ export class PropertyDetailsPage {
                     text: 'Twitter',
                     handler: () => {
                         console.log(window.location.href);
-                        this.socialSharing.shareViaTwitter('message', image, url).then(() => {
+                        this.socialSharing.shareViaTwitter('message', undefined, undefined).then(() => {
                         // Success!
                         }).catch(() => {
                         // Error!
