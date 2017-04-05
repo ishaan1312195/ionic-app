@@ -3,6 +3,7 @@
   "engines": {
     "node": "5.10.0"
   },
+  "version": "1.0.0",
   "scripts": {
     "dev": "node node_modules/nodemon/bin/nodemon.js server.js",
     "start": "node server",
