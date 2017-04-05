@@ -47,25 +47,30 @@ export class PropertyDetailsPage {
                 {
                     text: 'Text',
                     handler: () => {
-                        console.log('Text clicked');
+                        console.log(window.location.href);
                     }
                 },
                 {
                     text: 'Email',
                     handler: () => {
-                        console.log('Email clicked');
+                        console.log(window.location.href);
                     }
                 },
                 {
                     text: 'Facebook',
                     handler: () => {
-                        console.log('Facebook clicked');
+                        console.log(window.location.href);
+                        FB.ui({
+                            method: 'share',
+                            display: 'popup',
+                            href: window.location.href,
+                        }, function(response){}); 
                     }
                 },
                 {
                     text: 'Twitter',
                     handler: () => {
-                        console.log('Twitter clicked');
+                        console.log(window.location.href);
                     }
                 },
                 {
