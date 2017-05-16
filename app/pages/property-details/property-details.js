@@ -2,7 +2,7 @@ import {OnInit} from '@angular/core';
 import {Page, NavController, NavParams, Alert, ActionSheet} from 'ionic-angular';
 import {BrokerDetailsPage} from '../broker-details/broker-details';
 import {PropertyService} from '../../services/property-service';
-import { SocialSharing } from '@ionic-native/social-sharing';
+import {SocialSharing } from '@ionic-native/social-sharing';
 
 
 @Page({
