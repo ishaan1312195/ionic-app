@@ -5,7 +5,7 @@
         "node": "6.1.x"
     },
     "scripts": {
-        "start": "node app.js",
+        "start": "node server.js",
         "postinstall": "gulp build"
     },
     "devDependencies": {
@@ -60,18 +60,5 @@
             "version": "3.9.2",
             "locator": "ios@3.9.2"
         }
-    ],
-    "cordova": {
-        "plugins": {
-            "cordova-plugin-console": {},
-            "cordova-plugin-device": {},
-            "cordova-plugin-splashscreen": {},
-            "cordova-plugin-statusbar": {},
-            "cordova-plugin-whitelist": {},
-            "ionic-plugin-keyboard": {}
-        },
-        "platforms": [
-            "ios"
-        ]
-    }
+    ]
 }
