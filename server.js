@@ -59,7 +59,8 @@ app.get('/property/:id', function(req, res) {
 
 app.get('/favorite', function(req, res) {
   client.query('SELECT ' + propertyTable + '.*, ' + favoriteTable + '.sfid AS favorite__c_sfid FROM ' + propertyTable + ', ' + favoriteTable + ' WHERE ' + propertyTable + '.sfid = ' + favoriteTable + '.property__c', function(error, data) {
-    res.json(data.rows);
+    if(data.rows !== null || data.rows !== undefined)
+      res.json(data.rows);
   });
 });
 
