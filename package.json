@@ -5,10 +5,7 @@
         "node": "6.1.x"
     },
     "scripts": {
-        "dev": "node node_modules/nodemon/bin/nodemon.js server.js",
-        "ionic:build": "ionic-app-scripts build",
-        "ionic:serve": "ionic-app-scripts serve",
-        "start": "node server.js",
+        "start": "node app",
         "postinstall": "gulp build"
     },
     "devDependencies": {
