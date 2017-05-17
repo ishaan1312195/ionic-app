@@ -2,7 +2,7 @@ import {OnInit} from '@angular/core';
 import {Page, NavController, NavParams, Alert, ActionSheet} from 'ionic-angular';
 import {BrokerDetailsPage} from '../broker-details/broker-details';
 import {PropertyService} from '../../services/property-service';
-import {SocialSharing } from '@ionic-native/social-sharing';
+//import {SocialSharing } from '@ionic-native/social-sharing';
 
 
 @Page({
@@ -56,44 +56,44 @@ export class PropertyDetailsPage {
                     text: 'Email',
                     handler: () => {
                         console.log(window.location.href);
-                        this.socialSharing.shareViaEmail('Body', 'Subject', 'recipient@example.org').then(() => {
+                        /*//this.socialSharing.shareViaEmail('Body', 'Subject', 'recipient@example.org').then(() => {
                         // Success!
                         }).catch(() => {
                         // Error!
-                        });
+                        });*/
                     }
                 },
                 {
                     text: 'Facebook',
                     handler: () => {
                         console.log(window.location.href);
-                        this.socialSharing.shareViaFacebook('message', undefined, undefined).then(() => {
+                        /*//this.socialSharing.shareViaFacebook('message', undefined, undefined).then(() => {
                         // Success!
                         }).catch(() => {
                         // Error!
-                        });
+                        });*/
                     }
                 },
                 {
                     text: 'Twitter',
                     handler: () => {
                         console.log(window.location.href);
-                        this.socialSharing.shareViaTwitter('message', undefined, undefined).then(() => {
+                        /*//this.socialSharing.shareViaTwitter('message', undefined, undefined).then(() => {
                         // Success!
                         }).catch(() => {
                         // Error!
-                        });
+                        });*/
                     }
                 },
                 {
                     text: 'Whatsapp',
                     handler: () => {
                         console.log(window.location.href);
-                        this.socialSharing.shareViaWhatsapp('message', image, url).then(() => {
+                        /*//this.socialSharing.shareViaWhatsapp('message', image, url).then(() => {
                         // Success!
                         }).catch(() => {
                         // Error!
-                        });
+                        });*/
                     }
                 },
                 {
