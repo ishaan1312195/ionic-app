@@ -4,7 +4,7 @@
   "keywords": [
     "app-cloud"
   ],
-  "repository": "https://github.com/ishaan1312195/ionic-app",
+  "repository": "https://github.com/dreamhouseapp/dreamhouse-web-app",
   "addons": [
     "heroku-postgresql"
   ]

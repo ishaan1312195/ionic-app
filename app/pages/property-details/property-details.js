@@ -2,7 +2,6 @@ import {OnInit} from '@angular/core';
 import {Page, NavController, NavParams, Alert, ActionSheet} from 'ionic-angular';
 import {BrokerDetailsPage} from '../broker-details/broker-details';
 import {PropertyService} from '../../services/property-service';
-//import {SocialSharing } from '@ionic-native/social-sharing';
 
 
 @Page({
@@ -11,14 +10,13 @@ import {PropertyService} from '../../services/property-service';
 export class PropertyDetailsPage {
 
     static get parameters() {
-        return [[NavController], [NavParams], [PropertyService], [SocialSharing]];
+        return [[NavController], [NavParams], [PropertyService]];
     }
 
-    constructor(nav, navParams, propertyService, socialSharing) {
+    constructor(nav, navParams, propertyService) {
         this.nav = nav;
         this.propertyService = propertyService;
         this.property = navParams.get('property');
-        this.socialSharing = socialSharing;
     }
 
     ngOnInit() {
@@ -49,51 +47,25 @@ export class PropertyDetailsPage {
                 {
                     text: 'Text',
                     handler: () => {
-                        console.log(window.location.href);
+                        console.log('Text clicked');
                     }
                 },
                 {
                     text: 'Email',
                     handler: () => {
-                        console.log(window.location.href);
-                        /*//this.socialSharing.shareViaEmail('Body', 'Subject', 'recipient@example.org').then(() => {
-                        // Success!
-                        }).catch(() => {
-                        // Error!
-                        });*/
+                        console.log('Email clicked');
                     }
                 },
                 {
                     text: 'Facebook',
                     handler: () => {
-                        console.log(window.location.href);
-                        /*//this.socialSharing.shareViaFacebook('message', undefined, undefined).then(() => {
-                        // Success!
-                        }).catch(() => {
-                        // Error!
-                        });*/
+                        console.log('Facebook clicked');
                     }
                 },
                 {
                     text: 'Twitter',
                     handler: () => {
-                        console.log(window.location.href);
-                        /*//this.socialSharing.shareViaTwitter('message', undefined, undefined).then(() => {
-                        // Success!
-                        }).catch(() => {
-                        // Error!
-                        });*/
-                    }
-                },
-                {
-                    text: 'Whatsapp',
-                    handler: () => {
-                        console.log(window.location.href);
-                        /*//this.socialSharing.shareViaWhatsapp('message', image, url).then(() => {
-                        // Success!
-                        }).catch(() => {
-                        // Error!
-                        });*/
+                        console.log('Twitter clicked');
                     }
                 },
                 {

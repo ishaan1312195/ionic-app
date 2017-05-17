@@ -1,12 +1,13 @@
 {
   "name": "dreamhouse-web-app",
-  "version":"1.0.0",
   "engines": {
     "node": "6.1.x"
   },
   "scripts": {
     "dev": "node node_modules/nodemon/bin/nodemon.js server.js",
-    "start": "node server",
+    "ionic:build": "ionic-app-scripts build",     
+    "ionic:serve": "ionic-app-scripts serve",
+    "start":"npm install -g ionic cordova && ionic serve",
     "postinstall": "gulp build"
   },
   "devDependencies": {
